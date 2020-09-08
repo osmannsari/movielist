@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search( {handleInput} ) {
+function Search( {handleInput, search} ) {
     return (
       <section className="searchBox-section">
 
@@ -8,7 +8,9 @@ function Search( {handleInput} ) {
           type="text" 
           placeholder="Search with movie name" 
           className="searchbox"
-          onChange={handleInput} />
+          onChange={handleInput}
+          onKeyPress={search} 
+          />
 
           
 

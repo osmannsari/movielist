@@ -59,3 +59,43 @@ section {
   box-shadow: 0px 0px 8px 3px #4484C4;
 
 }
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 2%;
+}
+
+.results .result{
+
+  width: 33.33%;
+  min-width: 250px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+.results .result img{
+  display: block;
+  width: 100%;
+}
+
+.results .result h3{
+  color: black;
+  font-family:'Times New Roman', Times, serif; 
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+  background-color:#5655;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.results .result:hover h3{
+
+  background-color: #ffffff ;
+  color: cornflowerblue;
+
+}
