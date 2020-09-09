@@ -66,6 +66,49 @@ section {
   margin: 0px 2%;
 }
 
+.searchBox-section .pagination .paginationbutton {
+  display: inline-block;
+  padding: 1% 2%;
+  font-size:20px;
+  font-weight: 700;
+  position: absolute;
+  right: 22%;
+  
+ 
+  
+  
+  background: rgba(49, 135, 206, 0.582);
+  color: black;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+
+}
+
+.searchBox-section .pagination .pageprev {
+  display: inline-block;
+  padding: 1% 2%;
+  font-size:20px;
+  font-weight: 700;
+  position: absolute;
+  
+ 
+  
+  
+  background: rgba(49, 135, 206, 0.582);
+  color: black;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+  
+}
+
 .results .result{
 
   width: 33.33%;
@@ -100,6 +143,46 @@ section {
 
 }
 
+.defresults {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 0%;
+  padding: 0px;
+}
+
+.defresults .result{
+
+  width: 33.33%;
+  min-width: 250px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+.defresults .result img{
+  display: block;
+  width: 100%;
+}
+
+.defresults .result h3{
+  color: black;
+  font-family:'Times New Roman', Times, serif; 
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+  background-color:#5655;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.defresults .result:hover h3{
+
+  background-color: #ffffff ;
+  color: cornflowerblue;
+
+}
 .popup {
   position:fixed;
   top: 0;
@@ -130,12 +213,15 @@ section {
 .popup .content h2 span {
   font-weight: 350;
   font-size: 20px;
-  font-family:'Times New Roman', Times, serif; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
 }
 
 .popup .content .rating {
   margin-bottom: 35px;
-  font-family:'Times New Roman', Times, serif; 
+  font-weight: 350;
+  font-size: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
 }
 
 
@@ -154,6 +240,8 @@ section {
 .popup .content .plot p {
   flex: 1 1 50%;
   padding: 3%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+
 }
 
 .popup .content .close {
