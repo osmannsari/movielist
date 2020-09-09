@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search({ handleInput, handleInputYear, handleInputType, search, searchyear, searchtype,pagination, paginationprev }) {
+function Search({ handleInput, handleInputYear, handleInputType, search, pagination, paginationprev }) {
   return (
     <section className="searchBox-section">
 
@@ -17,7 +17,7 @@ function Search({ handleInput, handleInputYear, handleInputType, search, searchy
         placeholder="Search with date"
         className="searchbox"
         onChange={handleInputYear}
-        onKeyPress={searchyear}
+        onKeyPress={search}
       />
       <br></br>
       <input
@@ -25,7 +25,7 @@ function Search({ handleInput, handleInputYear, handleInputType, search, searchy
         placeholder="Search with type"
         className="searchbox"
         onChange={handleInputType}
-        onKeyPress={searchtype}
+        onKeyPress={search}
       /> <br></br>
       <br></br>
       

@@ -43,7 +43,7 @@ function App() {
   const search = (e) => {
     
     if (e.key === "Enter") {
-      axios(apiurl + "&s=" + state.s ).then(({ data }) => {
+      axios(apiurl + "&s=" + state.s + "&y=" + state.y + "&type=" + state.t ).then(({ data }) => {
         let results = data.Search;
         setState(prevState => {
           return { ...prevState, results: results }
@@ -53,32 +53,7 @@ function App() {
     
   }
 
-  const searchyear = (e) => {
-    if (e.key === "Enter") {
-      
-      axios(apiurl + "&s=" + state.s + "&y=" + state.y).then(({ data }) => {
-        let results = data.Search;
-        setState(prevState => {
-          return { ...prevState, results: results }
-        })
-      })
-    }
-  }
-
-  const searchtype = (e) => {
-    if (e.key === "Enter") {
-      
-      axios(apiurl + "&s=" + state.s + "&type=" + state.t).then(({ data }) => {
-        let results = data.Search;
-        setState(prevState => {
-          return { ...prevState, results: results }
-        })
-      })
-    }
-  }
-
-
-
+ 
   const handleInput = (e) => {
     let s = e.target.value;
     setState(prevState => {
@@ -184,7 +159,7 @@ if(state.s !== ""){
       <main>
 
         <Search handleInput={handleInput} handleInputYear={handleInputYear} handleInputType={handleInputType}
-          search={search} searchyear={searchyear} searchtype={searchtype} pagination={pagination} paginationprev={paginationprev} />
+          search={search} pagination={pagination} paginationprev={paginationprev} />
 
         <Defresults defresults={state.defresults} openPopup={openPopup} />
 
